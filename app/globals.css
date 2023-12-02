@@ -4,3 +4,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes onScroll {
+    from {
+        transform: translateY(-100px);
+    }
+    to{ transform: translateY(0);}
+}
+#Git{
+    animation: onScroll 1s ease-in 0s 1  none;
+
+}
+
+.reveal{
+    position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+.reveal.active{
+    transform: translateY(0);
+  opacity: 1;
+}

@@ -9,11 +9,15 @@ module.exports = {
     extend: {
       colors:{
         greena :'#0A8270',
-        greenb: '#7CFF6B'
+        greenb: '#7CFF6B',
+        bluea : '#1C3CA1',
+        blueb : '#031544'
+
       },
       fontFamily:{
         Noto : ['Noto Sans', 'sans-serif'],
-      },
+        Easter : ['Easter']
+      }, 
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
