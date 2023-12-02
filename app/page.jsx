@@ -6,42 +6,28 @@ import { FaTiktok } from "react-icons/fa6";
 import "./globals.css";
 import "./scroll"
 import { useEffect } from 'react';
-import localFont from '@next/font/local'
-import { Lato } from 'next/font/google';
+import localFont from "next/font/local"
+import { Noto_Sans } from 'next/font/google';
 import logo from '../app/assets/IB_x_FAC_ver2.png'
 
-
+const noto = Noto_Sans({subsets: ['latin'],weight: '100'})
+const myFont = localFont({src: '../app/assets/fonts/Easter.ttf'})
 export default function Home() {
-  // const myFont = localFont({src : './assets/fonts/Easter.ttf'})
-//  useLayoutEffect(() => {
-//   window.addEventListener('scroll', onScroll)
-//   return () => window.removeEventListener('scroll', onScroll)
-// }, [])
-// const topPosition = ourRef.current.getBoundingClientRect().top
-// const onScroll = () => {
-//   const scrollPosition = window.scrollY + window.innerHeight
-//   if (topPosition < scrollPosition) {
-//     // trigger animation
-//   }
-// }
-        // const [loaded] = useFonts({
-        //   Easter: require("./assets/fonts/Easter.ttf")
-        // });
-        // if (!loaded) {
-        //   return null
-        // } 
+ 
+
+       
 
   return (
-    <div className='bg-gradient-to-r from-bluea to-blueb text-white'>
+    <div className='bg-gradient-to-r from-blueb to-bluea text-white'>
       {/* nanvbar goes here */}
       <nav>
         <div className='flex '>
           {/* logo */}
         <div className=' flex mx-auto my-5 text-5xl'>
-          <Image src={logo} className='w-10 h-10 mt-1 mr-5'></Image>
-          InfoBrains
+          <Image src={logo} className='h-10 w-10 mt-4 mr-6 text-white'></Image>
+          <h1 className='text-white text-4xl flex justify-center mt-5' style={noto.style}>InfoBrains</h1>
           </div>
-          <div className='mx-auto my-5 mt-auto lg:text-lg'><ul className='flex space-x-28 hover:cursor-pointer text-white'>
+          <div className='mx-auto my-5 mt-auto lg:text-lg'><ul className='flex space-x-24 hover:cursor-pointer text-white '>
             <li>Home</li>
             <li>Team</li>
             <li>Events</li>
@@ -50,8 +36,8 @@ export default function Home() {
         </div>
       </nav> 
       <main> 
-        <section  className='min-h-screen flex justify-center items-center'>
-          <h1 className='font-Neto text-4xl text-white'>YOU CAN MAKE A DIFFERENCE</h1>
+        <section  className='min-h-screen flex justify-center items-center text-6xl'>
+          <h1 className={myFont.className}>YOU CAN MAKE A DIFFERENCE</h1>
         </section>
         <section id="contacts" className='min-h-screen flex  justify-evenly items-center content-center '>
             <FaGithub id='Git' className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>

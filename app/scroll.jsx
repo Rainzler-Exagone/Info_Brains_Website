@@ -18,3 +18,17 @@
 // // useEffect(() => {
 // //     window.addEventListener("scroll",reveal);
 // //   })
+
+
+
+// //  useLayoutEffect(() => {
+//   window.addEventListener('scroll', onScroll)
+//   return () => window.removeEventListener('scroll', onScroll)
+// }, [])
+// const topPosition = ourRef.current.getBoundingClientRect().top
+// const onScroll = () => {
+//   const scrollPosition = window.scrollY + window.innerHeight
+//   if (topPosition < scrollPosition) {
+//     // trigger animation
+//   }
+// }
