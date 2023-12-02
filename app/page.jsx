@@ -9,6 +9,8 @@ import { useEffect } from 'react';
 import localFont from "next/font/local"
 import { Noto_Sans } from 'next/font/google';
 import logo from '../app/assets/IB_x_FAC_ver2.png'
+import soon from '../app/assets/commingsoon2.jpg'
+
 
 const noto = Noto_Sans({subsets: ['latin'],weight: '100'})
 const myFont = localFont({src: '../app/assets/fonts/Easter.ttf'})
@@ -28,10 +30,10 @@ export default function Home() {
           <h1 className='text-white text-4xl flex justify-center mt-5' style={noto.style}>InfoBrains</h1>
           </div>
           <div className='mx-auto my-5 mt-auto lg:text-lg'><ul className='flex space-x-24 hover:cursor-pointer text-white '>
-            <li>Home</li>
-            <li>Team</li>
-            <li>Events</li>
-            <li>About Us</li> 
+            <li className='hover:text-gray-400 duration-150 ease-in delay-75'>Home</li>
+            <li className='hover:text-gray-400 duration-150 ease-in delay-75'>Team</li>
+            <li className='hover:text-gray-400 duration-150 ease-in delay-75'>Events</li>
+            <li className='hover:text-gray-400 duration-150 ease-in delay-75'>About Us</li> 
             </ul></div>
         </div>
       </nav> 
@@ -39,12 +41,20 @@ export default function Home() {
         <section  className='min-h-screen flex justify-center items-center text-6xl'>
           <h1 className={myFont.className}>YOU CAN MAKE A DIFFERENCE</h1>
         </section>
-        <section id="contacts" className='min-h-screen flex  justify-evenly items-center content-center '>
-            <FaGithub id='Git' className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>
+        <section className='min-h-screen'>
+          <div className='flex justify-center items-center'><Image src={soon} height={500} width={500}></Image></div>
+        </section>
+        <section id="contacts" className='min-h-screen flex flex-col '>
+          <div className='flex justify-center items-center h-52'><h1 className='text-3xl'>
+             Visit us
+            </h1></div>
+            
+           <div className='flex  justify-evenly items-center content-center'>
+           <FaGithub id='Git' className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>
             <FaDiscord className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>
-            {/* <FaSquareInstagram className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer' /> */}
             <FaFacebook className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>
             <FaTiktok  className='w-40 h-40 hover:scale-150 ease-in-out duration-300 cursor-pointer'/>
+           </div>
         </section>
       </main>
     </div>
